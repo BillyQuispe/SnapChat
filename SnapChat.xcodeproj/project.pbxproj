@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260898E62C0E492100B4BBD9 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260898E52C0E492100B4BBD9 /* Snap.swift */; };
+		260898E82C0E4D5B00B4BBD9 /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260898E72C0E4D5B00B4BBD9 /* VerSnapViewController.swift */; };
+		260898EE2C0E518300B4BBD9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 260898ED2C0E518300B4BBD9 /* SDWebImage */; };
+		260898F02C0E518300B4BBD9 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 260898EF2C0E518300B4BBD9 /* SDWebImageMapKit */; };
 		260D7D3E2BFBCB7A009A8459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D7D3D2BFBCB7A009A8459 /* AppDelegate.swift */; };
 		260D7D402BFBCB7A009A8459 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D7D3F2BFBCB7A009A8459 /* SceneDelegate.swift */; };
 		260D7D422BFBCB7A009A8459 /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D7D412BFBCB7A009A8459 /* iniciarSesionViewController.swift */; };
@@ -33,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		260898E52C0E492100B4BBD9 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		260898E72C0E4D5B00B4BBD9 /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 		260D7D3A2BFBCB7A009A8459 /* SnapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260D7D3D2BFBCB7A009A8459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260D7D3F2BFBCB7A009A8459 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,10 +62,12 @@
 			files = (
 				260D7D682BFBDEB0009A8459 /* GoogleSignInSwift in Frameworks */,
 				260D7D552BFBD01B009A8459 /* FirebaseAnalytics in Frameworks */,
+				260898F02C0E518300B4BBD9 /* SDWebImageMapKit in Frameworks */,
 				260D7D662BFBDEB0009A8459 /* GoogleSignIn in Frameworks */,
 				26311DF32C0518D600527F21 /* FirebaseStorage in Frameworks */,
 				260D7D592BFBD01B009A8459 /* FirebaseAuth in Frameworks */,
 				260D7D572BFBD01B009A8459 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				260898EE2C0E518300B4BBD9 /* SDWebImage in Frameworks */,
 				260D7D612BFBD01B009A8459 /* FirebaseFirestoreSwift in Frameworks */,
 				260D7D5F2BFBD01B009A8459 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				26311DF52C0518DC00527F21 /* FirebaseDatabase in Frameworks */,
@@ -119,6 +127,7 @@
 				26311DF62C05204A00527F21 /* ElegirUsuarioViewController.swift */,
 				260D7D412BFBCB7A009A8459 /* iniciarSesionViewController.swift */,
 				267C86942C0A48790048B135 /* CrearUsuarioViewController.swift */,
+				260898E72C0E4D5B00B4BBD9 /* VerSnapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				26311DFA2C05249E00527F21 /* Usuario.swift */,
+				260898E52C0E492100B4BBD9 /* Snap.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -159,6 +169,8 @@
 				260D7D672BFBDEB0009A8459 /* GoogleSignInSwift */,
 				26311DF22C0518D600527F21 /* FirebaseStorage */,
 				26311DF42C0518DC00527F21 /* FirebaseDatabase */,
+				260898ED2C0E518300B4BBD9 /* SDWebImage */,
+				260898EF2C0E518300B4BBD9 /* SDWebImageMapKit */,
 			);
 			productName = SnapChat;
 			productReference = 260D7D3A2BFBCB7A009A8459 /* SnapChat.app */;
@@ -191,6 +203,7 @@
 			packageReferences = (
 				260D7D532BFBD01B009A8459 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				260D7D642BFBDEB0009A8459 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				260898EC2C0E518300B4BBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 260D7D3B2BFBCB7A009A8459 /* Products */;
 			projectDirPath = "";
@@ -222,7 +235,9 @@
 			files = (
 				26311DEE2C050A4B00527F21 /* SnapsViewController.swift in Sources */,
 				26311DF02C050D4900527F21 /* ImagenViewController.swift in Sources */,
+				260898E62C0E492100B4BBD9 /* Snap.swift in Sources */,
 				26311DFB2C05249E00527F21 /* Usuario.swift in Sources */,
+				260898E82C0E4D5B00B4BBD9 /* VerSnapViewController.swift in Sources */,
 				260D7D422BFBCB7A009A8459 /* iniciarSesionViewController.swift in Sources */,
 				260D7D3E2BFBCB7A009A8459 /* AppDelegate.swift in Sources */,
 				260D7D402BFBCB7A009A8459 /* SceneDelegate.swift in Sources */,
@@ -447,6 +462,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		260898EC2C0E518300B4BBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		260D7D532BFBD01B009A8459 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -466,6 +489,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		260898ED2C0E518300B4BBD9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 260898EC2C0E518300B4BBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		260898EF2C0E518300B4BBD9 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 260898EC2C0E518300B4BBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		260D7D542BFBD01B009A8459 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 260D7D532BFBD01B009A8459 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

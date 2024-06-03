@@ -9,7 +9,7 @@
     import FirebaseAuth
     import GoogleSignIn
     import FirebaseCore
-
+    import FirebaseDatabase
 
     class iniciarSesionViewController: UIViewController {
 
@@ -23,12 +23,22 @@
         }
 
             @IBAction func iniciarSesionTapped(_ sender: Any) {
-                Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-                    print ("Intentando Iniciar Sesion")
+                Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user, error) in
+                    print("Intentando Iniciar Sesión")
                     if error != nil{
-                        print ("Se presento el siguiente error: \(error)")
+                        print("Se presento el siguiente error: \(error)")
+                        let alerta = UIAlertController(title: "Inicio de sesión", message: "Credenciales incorrectas", preferredStyle: .alert)
+                        let btnOK = UIAlertAction(title: "Crear", style: .default, handler: { (UIAlertAction) in
+                            self.performSegue(withIdentifier: "registrarSegue", sender: nil)
+                        })
+                        let btnCancelar = UIAlertAction(title: "Cancelar", style: .default, handler: { (UIAlertAction) in })
+                        alerta.addAction(btnOK)
+                        alerta.addAction(btnCancelar)
+                        self.present(alerta, animated: true, completion: nil)
+                        
                     }else{
-                        print ("Inicio de Sesion Exitoso")
+                        print("Inicio de sesión exitoso")
+                        self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
                     }
                 }
             }

@@ -171,6 +171,15 @@
                                 <rect key="frame" x="28" y="148" width="374" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCy-Rk-wAo">
+                                <rect key="frame" x="140" y="469" width="135" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reproducir audio"/>
+                                <connections>
+                                    <action selector="btnReproducir:" destination="L8y-AY-jx1" eventType="touchUpInside" id="yKq-TR-Qdd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="noO-t4-uUI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -218,11 +227,47 @@
                                     <action selector="elegirContactoBoton:" destination="rzC-2y-BCo" eventType="touchUpInside" id="Rlb-XE-Pl6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8r-Ox-lZ2">
+                                <rect key="frame" x="142" y="390" width="130.5" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mic" catalog="system" title=" Grabar Audio">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="grabar:" destination="rzC-2y-BCo" eventType="touchUpInside" id="dRC-x3-fHv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mi-0J-VWd">
+                                <rect key="frame" x="129" y="443" width="156" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play" catalog="system" title=" Reproducir Audio">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="play:" destination="rzC-2y-BCo" eventType="touchUpInside" id="xcG-La-n6n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYY-bx-LQ4">
+                                <rect key="frame" x="185" y="347" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese un nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogN-tR-fq4">
+                                <rect key="frame" x="132.5" y="491" width="149" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qx0-h5-LYB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xll-8s-C4e" firstAttribute="top" secondItem="cjZ-Q2-orz" secondAttribute="bottom" constant="15" id="2lt-Kj-omR"/>
+                            <constraint firstItem="iYY-bx-LQ4" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="3hu-vt-GWh"/>
                             <constraint firstItem="xll-8s-C4e" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="CVh-7o-GHc"/>
                             <constraint firstItem="xll-8s-C4e" firstAttribute="top" secondItem="cjZ-Q2-orz" secondAttribute="bottom" constant="15" id="NPg-pN-bBy"/>
                             <constraint firstItem="a9J-WJ-kdE" firstAttribute="width" secondItem="xll-8s-C4e" secondAttribute="width" id="O1A-Zb-IIN"/>
@@ -230,8 +275,15 @@
                             <constraint firstItem="cjZ-Q2-orz" firstAttribute="top" secondItem="Qx0-h5-LYB" secondAttribute="top" constant="20" id="WHN-cD-FDX"/>
                             <constraint firstItem="a9J-WJ-kdE" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="Y1Q-aq-Z5K"/>
                             <constraint firstItem="a9J-WJ-kdE" firstAttribute="top" secondItem="xll-8s-C4e" secondAttribute="bottom" constant="17" id="YMl-jp-kIY"/>
+                            <constraint firstItem="0Mi-0J-VWd" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="dCK-ON-77P"/>
                             <constraint firstItem="cjZ-Q2-orz" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="fg7-Ou-enk"/>
+                            <constraint firstItem="0Mi-0J-VWd" firstAttribute="top" secondItem="s8r-Ox-lZ2" secondAttribute="bottom" constant="22" id="jfP-7I-LUN"/>
+                            <constraint firstItem="s8r-Ox-lZ2" firstAttribute="top" secondItem="iYY-bx-LQ4" secondAttribute="bottom" constant="22" id="mJf-Oe-saE"/>
+                            <constraint firstItem="s8r-Ox-lZ2" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="p5g-fe-6NF"/>
+                            <constraint firstItem="ogN-tR-fq4" firstAttribute="top" secondItem="0Mi-0J-VWd" secondAttribute="bottom" constant="17" id="rtP-bO-29R"/>
                             <constraint firstItem="xll-8s-C4e" firstAttribute="width" secondItem="cjZ-Q2-orz" secondAttribute="width" id="svd-pa-XeD"/>
+                            <constraint firstItem="ogN-tR-fq4" firstAttribute="centerX" secondItem="yQr-te-1R9" secondAttribute="centerX" id="tfh-yh-8aF"/>
+                            <constraint firstItem="iYY-bx-LQ4" firstAttribute="top" secondItem="a9J-WJ-kdE" secondAttribute="bottom" constant="46" id="wje-gs-poU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Enviar Mensaje" id="5dM-FC-Iwe">
@@ -242,9 +294,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnGrabar" destination="s8r-Ox-lZ2" id="P7a-mJ-Hkb"/>
+                        <outlet property="btnPlay" destination="0Mi-0J-VWd" id="rrU-xA-XAH"/>
                         <outlet property="descripcionTextField" destination="xll-8s-C4e" id="ugS-fh-tAQ"/>
                         <outlet property="elegirContactoBoton" destination="a9J-WJ-kdE" id="mzx-9N-sDw"/>
                         <outlet property="imageView" destination="cjZ-Q2-orz" id="ZEg-m8-0DO"/>
+                        <outlet property="txtNombreaudio" destination="ogN-tR-fq4" id="f3S-Fb-jq3"/>
                         <segue destination="0Bj-bA-m0C" kind="show" identifier="seleccionarContactoSegue" id="O0b-ab-x18"/>
                     </connections>
                 </viewController>
@@ -397,6 +452,8 @@
     <resources>
         <image name="google (1)" width="16" height="16"/>
         <image name="imagen" width="512" height="512"/>
+        <image name="mic" catalog="system" width="108" height="128"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
